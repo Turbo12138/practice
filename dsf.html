@@ -1,0 +1,193 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>有道翻译API</title>
+    <meta name="description" content="有道翻译API">
+    <link rel="shortcut icon" type="image/x-icon" href="http://shared.ydstatic.com/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://shared.ydstatic.com/api/1.0.6/styles/interface-packed.css">
+    <script type="text/javascript" src="http://fanyi.youdao.com/openapi.do?type=data&amp;doctype=jsonp&amp;version=1.1&amp;relatedUrl=http%3A%2F%2Ffanyi.youdao.com%2Fopenapi%3Fpath%3Dweb-mode&amp;keyfrom=test&amp;key=null&amp;callback=YoudaoSelector.Instance.update&amp;translate=on&amp;q=June&amp;ts=1461295119817" charset="utf-8"></script></head>
+<script type="text/javascript" src="http://fanyi.youdao.com/openapi.do?keyfrom=huichuang&key=386196262&type=selector&version=1.2&translate=on" charset="utf-8"></script>
+<script src="jquery-2.1.4.min.js"></script>
+<body>
+<div id="page">
+
+    <div id="hd">
+        <div id="siteNav">
+            <h1><a class="logo" href="./openapi">有道翻译API</a></h1>
+    <span class="link"><a href="http://www.youdao.com/" target="_blank" rel="nofollow">有道首页&nbsp;</a> |
+        <a href="http://www.youdao.com/about/productlist.html" target="_blank" rel="nofollow">&nbsp;更多有道产品</a></span>
+        </div>
+        <ul id="globalNav">
+            <li><a href="./openapi">首&nbsp;&nbsp;页</a></li>
+            <li class="current"><a href="./openapi?path=web-mode">添加网页模块</a></li>
+            <li><a href="./openapi?path=data-mode">调用数据接口</a></li>
+            <li><a href="./openapi?path=case">经典案例</a></li>
+        </ul>
+
+        <div class="banner web-mode">
+            <dl class="bannerContents">
+                <dt>网页模块是什么？</dt>
+                <dd>
+                    <span>为什么要添加网页模块？</span>
+                    <span>通过添加网页模块，您可以更加方便、快速地将有道翻译提供的翻译或查词功能整合到您的网站中。</span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div id="bd">
+        <div class="mod step">
+            <h2 class="hd">第一步：选择您要添加的模块和功能</h2>
+
+            <div class="bd">
+                <ul class="tabNav">
+                    <li class="current-tab"><a class="selector" href="./openapi?path=web-mode&amp;mode=selector">在我的网站上增加划词翻译</a></li>
+                    <li><a class="dicter" href="./openapi?path=web-mode&amp;mode=dicter">在我的网站上提供在线词典</a></li>
+                    <li><a class="fanyier" href="./openapi?path=web-mode&amp;mode=fanyier">在我的网站上提供在线翻译</a></li>
+                </ul>
+                <div id="demo" class="content" mode="selector">
+
+                    <h3><span class="strong">实际效果体验：</span>请在下面的文章中划词</h3>
+
+                    <div class="test">
+                        <div id="YOUDAO_SELECTOR_WRAPPER" bindto="demo" style="display: block; margin: 0px; border: 0px; padding: 0px; width: 320px; height: 155px; position: absolute; left: 722px; top: 515px; "><iframe id="YOUDAO_SELECTOR_IFRAME" frameborder="0" src="about:blank" style="background-color: white; border: 0px; width: 320px; height: 155px; "></iframe></div>
+                        <p class="tip">Power troubles may soon be solved</p>
+
+                        <p>China is expected to see its power shortages substantially eased beginning in the next half
+                            of this year, according to a senior official with the China Electricity Council (CEC)
+                            yesterday.</p>
+
+                        <p>"Power supply and demand will be balanced nationwide in the next of the year, although
+                            short-term power shortages will still exist in a few regions," said CEC secretary-general
+                            Wang Yonggan.</p>
+
+                        <p>Power shortages only existed in four provinces in June, compared with 25 at the beginning of
+                            2005 and nine in January.</p>
+
+                        <p>Wang said power shortages had been remarkably relieved in the first six months of this year
+                            because more newly built large power stations were put into use.</p>
+
+                        <p>In the first half of this year, China saw a newly installed power capacity of 32.41 million
+                            kilowatts, 11.1 percent of which is from hydro power stations and 88.48 percent from thermal
+                            power plants. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft">
+                <span class="ft-a"></span><span class="ft-b"></span><span class="ft-c"></span>
+            </div>
+        </div>
+
+        <div class="mod step apply-success">
+            <h2 class="hd">
+                第二步：申请key
+            </h2>
+
+            <div class="bd">
+                <form class="bd-1">
+                    <p>
+                        <label for="siteName">网站名称：</label>
+                        <input id="siteName" name="siteName" type="text">
+                        <span class="tip">6~18个字符，包括字母/数字/连字符，开头和结尾必须是字母或数字</span>
+                        <span class="strong error"></span>
+                    </p>
+
+                    <div id="siteNameMsg" class="error-msg invisible">${siteNameMsg}</div>
+                    <p>
+                        <label for="siteAddr">网站地址：</label>
+                        <input id="siteAddr" name="siteAddr" type="text" value="http://">
+                        <span class="tip">在此填写应用所在网站或应用的支持网站</span>
+                    </p>
+
+                    <div id="siteAddrMsg" class="error-msg invisible">${siteAddrMsg}</div>
+                    <p>
+                        <label for="siteInfo" class="forText">网站说明：</label>
+                        <textarea id="siteInfo" name="siteInfo"></textarea>
+                        <span class="tip forText">在此描述您的网站或应用，不超过200字</span>
+                    </p>
+
+                    <div id="siteInfoMsg" class="error-msg invisible">${siteInfoMsg}</div>
+                    <p>
+                        <label for="contact">联系方式：</label>
+                        <input id="contact" name="contact" type="text">
+                        <span class="tip">电话/邮箱皆可</span>
+                    </p>
+
+                    <div id="contactMsg" class="error-msg invisible">${contactMsg}</div>
+                    <p class="accept">
+                        <input id="acceptIt" type="checkbox">
+                        <label for="acceptIt">我接受 <a href="http://www.youdao.com/help/fanyiapi/privacy" target="_blank">有道翻译API使用条款</a>
+                        </label>
+                    </p>
+
+                    <div id="acceptItMsg" class="error-msg invisible">请接受使用条款</div>
+
+                    <p class="applyWrapper">
+                        <a id="apply" class="apply" href="javascript:void(0)">申请</a>
+                    </p>
+                </form>
+                <div id="applyResult" class="bd-suc hidden">
+                    <h3 class="strong">${msg}</h3>
+
+                    <div class="keyValue">
+                        <h4><span class="strong">API key</span>：<span id="key">${key}</span></h4>
+                        <h4><span class="strong">keyfrom</span>：<span id="keyfrom">${keyfrom}</span></h4>
+                    </div>
+                    <ul>
+                        <li>创建时间：<span id="resultDate">${date}</span></li>
+                        <li>网站名称：<span id="resultSiteName">${siteName}</span></li>
+                        <li>网站地址：<span id="resultSiteAddr">${siteAddr}</span></li>
+                    </ul>
+                </div>
+                <ul class="bd-2">
+                    <li class="border">使用<span class="strong">API key</span>
+                        <span>时，请求频率限制为每小时1000次，超过限制会被封禁。</span></li>
+                    <li>如果您的应用确实需要超过每小时1000次请求，请与
+                        <a href="mailto:translate-service@corp.youdao.com">translate-service@corp.youdao.com</a> 联系。
+                        <span>并提供您的应用的详细信息（名称、功能、网站地址、使用API的方式、</span><span class="strong">API key</span>、预计访问频率、是否商业行为、截屏等等）
+                        <span>以及该应用访问有道翻译API时所使用的服务器IP，审核通过后可放宽访问限制。</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="ft">
+                <span class="ft-a"></span><span class="ft-b"></span><span class="ft-c"></span>
+            </div>
+        </div>
+
+        <div class="mod step">
+            <h2 class="hd">第三步：复制代码到网站中</h2>
+
+            <div id="resultHtml" class="bd lInter">&lt;div id="YOUDAO_SELECTOR_WRAPPER" style="display:none; margin:0; border:0; padding:0; width:320px; height:240px;"&gt;&lt;/div&gt;</div>
+            <div id="resultCode" class="bd lInter">&lt;script type="text/javascript" src="http://fanyi.youdao.com/openapi.do?keyfrom=&lt;keyfrom&gt;&amp;key=&lt;key&gt;&amp;type=selector&amp;version=1.2&amp;translate=on" charset="utf-8"&gt;&lt;/script&gt;</div>
+            <div class="ft">
+                <span class="ft-a"></span><span class="ft-b"></span><span class="ft-c"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="ft">
+        <p class="bc">
+            <a href="http://www.youdao.com/help/fanyiapi/privacy" target="_blank">使用条款</a> -
+            <a href="http://fanyi.youdao.com" target="_blank">有道翻译</a> -
+            <a href="http://cidian.youdao.com" target="_blank">有道词典</a> -
+            <a href="http://www.youdao.com" target="_blank">有道首页</a> -
+            <a href="http://www.youdao.com/about/index.html" target="_blank">关于有道</a> -
+            <a href="http://i.youdao.com/" target="_blank">官方博客</a> -
+            <a href="http://techblog.youdao.com/" target="_blank">有道技术沙龙</a>
+        </p>
+
+        <p class="gc">© 2016 网易公司 京ICP证080268号</p>
+    </div>
+</div>
+
+
+<script type="text/javascript" charset="utf-8" src="./openapi.do?keyfrom=test&amp;type=selector&amp;version=1.2&amp;translate=on"></script>
+
+<script type="text/javascript" src="http://shared.ydstatic.com/js/jquery/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="http://shared.ydstatic.com/api/1.0.6/scripts/all-packed.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        YoudaoFanyiApi.webMode.init();
+    });
+</script>
+
+</body></html>

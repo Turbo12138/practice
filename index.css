@@ -1,0 +1,61 @@
+.test{width: 100%;background: #F9F9F9;height: 3075px}
+.container{width: 1170px;margin: 0 auto;background: white;border-left: 1px solid #d3d3d3;height:3075px}
+.content{height: 100px;width:1150px;margin: 0 auto }
+body{margin: 0;font-size: 12px}
+.tip{height: 100px;width: 400px;background: #d3d3d3;float: left}
+.tip1{height: 100px;width: 750px;background:  #F9F9F9;float: left}
+.list{width: 1150px;height: 50px;;margin: 0 auto}
+.list ul{margin:0;padding:0;margin-left:25px;}
+.list ul li{float:left;list-style-type:none;;height: 50px;display: block;margin-left:35px;padding-top: 15px}
+.list ul li a{color:#000000;font-size: 25px;}
+.inside{width: 1150px;;margin: 0 auto;}
+.left{width: 200px;background:lavenderblush;height: 2850px;float: left}
+.middle{width: 750px;;float: left}
+.right{width: 200px;background: lavenderblush;height: 2850px;float: right}
+.desk{width: 200px;height: 50px;background:#d3d3d3 }
+.middle_a{width: 720px;height: 1350px;margin: 0 auto ;}
+.middle_b{width: 720px;height: 30px;border-bottom: 1px solid #d3d3d3; }
+.middle_b p{font-size:25px; }
+.middle_c{width: 720px;height: 70px;border-bottom: 2px solid #d3d3d3; }
+.middle_c1{width: 105px;height: 29px;float: left;margin-top: 20px}
+.middle_c2{width: 105px;height: 29px;float: left;margin-top: 20px;margin-left: 20px;text-align: center}
+.file{border-bottom:2px solid #d3d3d3; }
+.files{border-top:2px solid #d3d3d3;margin-top: 20px}
+.bot p{margin-left: 20px}
+.bot a{ text-decoration: none;color:#000000 }
+.bot a:hover{ text-decoration: underline ;color:#000000 }
+.note span{font-weight: bold;}
+.bot{width: 1150px;height: 55px;clear: both;
+    margin: 0;
+    padding: 0;
+    background: #B6B6B6;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;}
+.dataintable {
+    margin-top: 10px;
+    border-collapse: collapse;
+    border: 1px solid #AAA;
+    width: 100%;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.td{border-right: 1px solid #d3d3d3}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border: 1px solid #AAA;
+}
+.dataintable th {
+    vertical-align: baseline;
+    padding: 5px 15px 5px 6px;
+    background-color: #D5D5D5;
+    border: 1px solid #AAA;
+    text-align: left;
+}
+.dataintable tr td{    border-right: 1px solid #d3d3d3;}
+
+
+
